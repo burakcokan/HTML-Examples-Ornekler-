@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FAKTORIYEL HESABI</title>
+</head>
+<body>
+    <input type="text" id="sayi" placeholder="Faktöriyeli hesaplanacak sayıyı giriniz"/>
+    <input type="button" id="hesapla" value="Hesapla" onClick="hesapla()" />
+<script>
+
+    function hesapla() {
+        /* çarpma işlemi yapılacaktır. çarpmanın etkisiz elemanı 1 dir.*/
+        var faktoriyel = 1;
+        sayi = document.getElementById("sayi").value;
+       // sayi = Number(sayi);
+        //hesaplama yapması için hesap butonunu seçiyoruz.
+        //var hesapBtn = document.getElementById("hesapla");
+        //fonksiyonu olaya bağlıyoruz.
+       // hesapBtn.onclick = hesapla;
+
+        /*faktöriyel işlemi sıfır ve üzerindeki sayılar için yapılır.*/
+        if (sayi >= 0)
+        {
+
+            for (var i = 1; i <= sayi; i++)
+            {
+                faktoriyel = faktoriyel * i;
+            }
+            /*sıfır altındaki değerler için faktöriyel işlemini göstermeyecektir.*/
+            window.alert(sayi + " sayisinin faktöriyeli " + faktoriyel);
+        }
+
+    }
+
+
+
+</script>   
+</body>
+</html>
